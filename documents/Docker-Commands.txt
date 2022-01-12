@@ -1,0 +1,52 @@
+Check Running Containers:
+> docker ps
+
+Check All Containers:
+> docker ps -a
+
+Check images:
+> docker images
+
+Run container in detach mode and specific port:
+> docker run -d -p 27017:27017 --name shopping-mongo mongo
+
+Start Container Using ID:
+> docker start a141
+
+Stop Container Using ID:
+> docker stop a141
+
+Remove Container Using ID:
+> docker rm a141
+ 
+See Logs:
+> docker logs -f shopping-mongo
+
+Exit:
+> Ctrl + c
+
+Exit Inner Container Terminal:
+> Exit
+
+Clear Terminal:
+> cls
+
+Run Bash Terminal Inside of Docker Container:
+> docker exec -it shopping-mongo /bin/bash
+
+****** DOCKER COMPOSE ******
+Building Docker Container and Set-up Without Detach Mode:
+> docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
+
+Setting-up the Docker Compose Configuration With Detach Mode:
+> docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
+
+Down the Docker Compose Configuration:
+> docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+
+-*-*-* Sub Queries
+.- Stoping containers 
+> docker stop $(docker ps -aq)
+
+.- Removing containers 
+> docker rm $(docker ps -aq)

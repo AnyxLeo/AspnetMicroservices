@@ -1,0 +1,2 @@
+* Update Package Dependencies in a Project
+Update-Package -ProjectName Catalog.API
