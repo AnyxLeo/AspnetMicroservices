@@ -1,2 +1,7 @@
-* Update Package Dependencies in a Project
-Update-Package -ProjectName Catalog.API
+****** PACKAGE MANAGER CONSOLE ******
+
+Update Package Dependencies in a Project:
+> Update-Package -ProjectName Catalog.API
+
+Install Package:
+> Install-Package [Package-name]
